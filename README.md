@@ -1,8 +1,19 @@
-# English OS 3.0：八大规则与介词底层逻辑
+# English OS 英语逻辑课件合集
+
+本仓库包含两份彼此独立的英语逻辑课件。它们共享“画面 → 关系 → 表达”的学习框架，但分别拥有独立网页入口。
+
+## 在线课件直达入口
+
+| 课件 | 核心内容 | 直接打开 |
+| --- | --- | --- |
+| **01｜English OS 3.0：八大规则与介词底层逻辑** | 句子骨架、八大规则、介词空间系统与 Chunk | [▶ 打开原课件](https://2023anita.github.io/english-os-courseware/) |
+| **02｜英语听力语块与底层逻辑** | 听力分块、空间画面、双语学习、996 与职业主题语块 | [▶ 打开新增课件](https://2023anita.github.io/english-os-courseware/english-listening-courseware.html) |
+
+> 新增课件是仓库中的第二个独立网页，不嵌套在原课件内部。
+
+## 课件 01｜English OS 3.0：八大规则与介词底层逻辑
 
 一个面向英语学习者的离线优先、视觉化 HTML 互动课件。
-
-在线地址：<https://2023anita.github.io/english-os-courseware/>
 
 ## 项目定位
 
@@ -59,10 +70,14 @@
 
 ```text
 .
-├── index.html                         # GitHub Pages 入口
+├── index.html                         # 课件 01：八大规则与介词底层逻辑
+├── english-listening-courseware.html  # 课件 02：英语听力语块与底层逻辑
+├── english-listening-content-map.json # 课件 02 内容与资源映射
 ├── english-os-3-preview/              # 本地 runtime、主题基础样式和动画资源
 ├── assets/english-os-3/               # 日式手绘插图资产
-└── content-map.json                   # 原始 DOCX → 课件页面映射清单
+├── assets/english-listening-xiaohei/  # 课件 02 小黑解释图
+├── assets/english-listening-source/   # 课件 02 原始学习照片归档
+└── content-map.json                   # 课件 01 原始 DOCX → 页面映射
 ```
 
 ## 本地运行
@@ -87,8 +102,8 @@ python3 -m http.server 8000
 
 在保留原有 English OS 3.0 主课件的基础上，本次以增量方式加入一份独立的长页 HTML 学习课件：
 
-- [打开英语听力语块与底层逻辑课件](./english-listening-courseware.html)
-- [查看本次内容映射与资源清单](./english-listening-content-map.json)
+- [直接打开英语听力语块与底层逻辑课件](https://2023anita.github.io/english-os-courseware/english-listening-courseware.html)
+- [查看本次内容映射与资源清单](https://github.com/2023Anita/english-os-courseware/blob/master/english-listening-content-map.json)
 
 新增内容来自一份 Word 学习笔记及 17 张原始听力学习照片，重点整理为：
 
