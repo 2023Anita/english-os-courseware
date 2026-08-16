@@ -1,0 +1,45 @@
+{
+  "title": "英语听力语块与底层逻辑总结课件",
+  "version": "2026-08-16",
+  "incremental": true,
+  "source_docx": "英语听力语块与底层逻辑总结笔记.docx",
+  "page": "english-listening-courseware.html",
+  "github_pages_path": "/english-os-courseware/english-listening-courseware.html",
+  "source_images": {
+    "count": 17,
+    "directory": "assets/english-listening-source",
+    "note": "用户本次提供的原始学习照片，按 01–17 稳定编号保存。"
+  },
+  "illustrations": {
+    "count": 9,
+    "directory": "assets/english-listening-xiaohei",
+    "style": "ian-xiaohei-illustrations",
+    "note": "8 张主要认知锚点图 + 1 张 immigrate / emigrate / migrate 方向词族补充图。"
+  },
+  "content_added": [
+    "听力语块切分：声音 → 语块 → 核心事件 → 关系 → 句子",
+    "介词空间画面：位置、路径、来源、目标、压力、支撑、控制和边界",
+    "双语学习：语言能力四部分、三种双语者、语言习得和大脑可塑性",
+    "996 主题：routine、industrious、translate into、come into the spotlight、weigh on 等",
+    "职业选择：emotionally balanced、when it comes to、at the mercy of、deep down、crave 等",
+    "完整英文段落、参考译文与词块全量索引；原始照片保留为仓库资产",
+    "按最新页面要求移除 HTML 中的附录 B 原始照片索引和附录 C 小黑解释图清单",
+    "长页课件的章节目录、阅读进度、打印 / 导出 PDF 和返回主课件入口"
+  ],
+  "preserved_existing_files": [
+    "index.html",
+    "english-os-3-preview/",
+    "assets/english-os-3/",
+    "content-map.json"
+  ],
+  "validation": {
+    "html_image_references": 9,
+    "expected_image_references": "9 illustrations used in the main learning chapters",
+    "html_exclusions": [
+      "附录 B｜原始学习照片索引",
+      "附录 C｜小黑解释图清单"
+    ],
+    "local_asset_check": "passed",
+    "source_content_check": "passed"
+  }
+}

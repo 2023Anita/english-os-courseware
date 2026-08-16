@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="English OS 3.0 英语听力语块与底层逻辑总结笔记：语块、空间画面、介词关系、双语者与职业主题听力材料。">
+<meta name="theme-color" content="#1769aa">
+<title>英语听力语块与底层逻辑｜English OS 3.0</title>
+
+<style id="english-listening-theme">
+:root{--ink:#24364a;--muted:#6d6b64;--blue:#1769aa;--red:#e15a48;--orange:#e97824;--paper:#fffdf8;--paper-2:#f4f8f8;--line:rgba(36,54,74,.14);--shadow:0 18px 44px rgba(35,52,70,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#eaf4f6 0%,#f8f4ea 48%,#f2f4f7 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:1.72}
+.site-shell{min-height:100vh}.site-header{position:relative;padding:54px 24px 38px;background:linear-gradient(130deg,#fefcf6,#e8f4f6);border-bottom:1px solid var(--line);overflow:hidden}.site-header:after{content:"";position:absolute;right:-90px;top:-110px;width:340px;height:340px;border:2px dashed rgba(225,90,72,.3);border-radius:50%;transform:rotate(18deg)}.header-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);font-weight:800}.site-header h1{font-size:clamp(34px,5vw,68px);line-height:1.08;margin:12px 0;color:#173a54;letter-spacing:-.045em}.site-header p{max-width:760px;margin:0;color:#5b686c;font-size:18px}.header-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.header-actions a,.header-actions button{font:inherit;text-decoration:none;border:1px solid var(--line);border-radius:999px;background:#fff;padding:9px 15px;color:var(--ink);cursor:pointer}.header-actions a.primary{background:var(--blue);border-color:var(--blue);color:#fff}.header-actions button:hover,.header-actions a:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(23,105,170,.14)}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;padding:30px 24px 70px}.toc{position:sticky;top:18px;align-self:start;max-height:calc(100vh - 36px);overflow:auto;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:18px;padding:18px 16px;box-shadow:var(--shadow)}.toc-title{font-size:12px;letter-spacing:.12em;color:var(--red);font-weight:800;margin-bottom:10px}.toc a{display:block;padding:7px 9px;color:#60717a;text-decoration:none;font-size:13px;line-height:1.4;border-left:3px solid transparent}.toc a.sub{padding-left:21px;font-size:12px}.toc a:hover,.toc a.active{color:var(--blue);background:#edf6f8;border-left-color:var(--red)}.doc-content{background:rgba(255,255,255,.92);border:1px solid rgba(36,54,74,.08);border-radius:24px;padding:42px 52px;box-shadow:var(--shadow);overflow:hidden}.doc-content>p:first-of-type{font-size:1.08rem}.doc-content h1{font-size:clamp(27px,3.2vw,42px);line-height:1.18;color:var(--blue);margin:2.2em 0 .55em;padding-top:.25em;border-top:1px solid rgba(23,105,170,.12);scroll-margin-top:24px}.doc-content h1:first-of-type{margin-top:0;border-top:0}.doc-content h2{font-size:clamp(21px,2.4vw,31px);line-height:1.28;color:var(--orange);margin:1.6em 0 .45em;scroll-margin-top:24px}.doc-content p{font-size:16px;margin:.72em 0;color:#344550}.doc-content ul,.doc-content ol{padding-left:1.5em}.doc-content li{margin:.35em 0}.doc-content table{width:100%;border-collapse:collapse;margin:18px 0;background:#fff;overflow:hidden;border:1px solid var(--line);border-radius:12px;font-size:14px;line-height:1.55}.doc-content td,.doc-content th{padding:10px 12px;border:1px solid rgba(36,54,74,.1);vertical-align:top}.doc-content th{background:#eaf4f5;color:#1d586c}.doc-content img{display:block;max-width:100%;height:auto;margin:18px auto 8px;border-radius:14px;box-shadow:0 8px 24px rgba(35,52,70,.09)}.doc-content img[width="600"]{width:min(100%,760px)}.doc-content p[align="center"]{text-align:center}.doc-content p[align="center"]:has(img){margin-top:26px}.doc-content hr{border:0;border-top:1px dashed var(--line);margin:32px 0}.doc-content font{font-family:inherit}.doc-content [style*="background"]{border-radius:10px;padding:10px 14px}.doc-content a{color:var(--blue)}.site-footer{max-width:1180px;margin:0 auto;padding:0 24px 40px;color:#7d8586;font-size:13px}.progress{position:fixed;left:0;right:0;top:0;height:4px;background:rgba(36,54,74,.08);z-index:30}.progress span{display:block;height:100%;width:0;background:var(--red);transition:width .12s linear}.back-top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:0;border-radius:50%;background:var(--blue);color:#fff;box-shadow:var(--shadow);cursor:pointer;opacity:0;pointer-events:none;transition:.2s}.back-top.show{opacity:1;pointer-events:auto}
+@media(max-width:900px){.layout{grid-template-columns:1fr;padding:18px 14px 50px}.toc{position:relative;top:auto;max-height:none}.toc a{display:inline-block;margin:2px 4px 2px 0;border:1px solid var(--line);border-radius:999px}.toc a.sub{padding-left:9px}.doc-content{padding:28px 20px;border-radius:18px}.site-header{padding:40px 18px 30px}.site-header p{font-size:16px}.doc-content p{font-size:15px}}
+@media print{body{background:#fff}.site-header{padding:20px 0;background:#fff}.layout{display:block;padding:0}.toc,.header-actions,.progress,.back-top{display:none}.doc-content{box-shadow:none;border:0;padding:0}.doc-content h1{page-break-before:auto}.site-footer{padding:20px 0}}
+</style>
+</head>
+<body>
+<div class="progress"><span id="progress-bar"></span></div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="eyebrow">ENGLISH OS 3.0 · LISTENING NOTES</div>
+    <h1>英语听力语块与底层逻辑</h1>
+    <p>把语块、空间画面、介词关系、疑问词和长句信息组织放进同一套可复习、可回查的学习系统。</p>
+    <div class="header-actions">
+      <a class="primary" href="index.html">返回 English OS 3.0 主课件</a>
+      <a href="README.md#新增英语听力语块与底层逻辑总结">查看本次增量说明</a>
+      <button id="print-btn" type="button">打印 / 导出 PDF</button>
+      <button id="focus-btn" type="button">聚焦阅读</button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+  <nav class="toc" aria-label="章节目录"><div class="toc-title">本页章节</div><div id="toc-links"></div></nav>
+  <main class="doc-content" id="courseware">
+
+<p align="center" style="line-height: 100%; margin-bottom: 0.18cm">
+<font color="#263238"><font face="Arial Unicode MS"><font size="5" style="font-size: 20pt"><b>英语听力语块与底层逻辑</b></font></font></font></p>
+<p align="center" style="line-height: 100%; margin-bottom: 0.42cm"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="3" style="font-size: 12pt">沿用
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 12pt">English
+OS 3.0 </font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 12pt">的“画面
+→ 关系 → 表达”学习系统</font></font></font></p>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-top: 0.18cm; margin-bottom: 0.32cm; background: #fff3e8">
+<font color="#e97824"><font face="Arial Unicode MS"><font size="3" style="font-size: 11pt"><b>这不是单词表，而是一份把听力输入、语块记忆、空间画面、疑问词和句子逻辑放在同一套系统中的学习笔记。</b></font></font></font></p>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/01-listening-chunks.png" name="听力语块总图" alt="听力语块总图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>总原则：不要先问“每个词是什么意思”，先问“这一段在做什么”。</i></font></font></font></p>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>一、这份笔记怎么使用</b></font></font></font></h1>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">每个重点表达都尽量按同一套顺序学习：先看空间或动作画面，再判断词与词之间的关系，然后把短语作为一个整体放回句子，最后回到听力中的停顿、重音和信息层次。</font></font></font></p>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.32cm; background: #eef5ff">
+<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt"><b>统一操作顺序：</b></font></font></font><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">听到声音
+→ 切出语块 → 找核心事件 → 判断关系 → 还原句子
+→ 跟读输出</font></font></font></p>
+<ul>
+	<li value="1"><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">语块思维：短语不是几个词临时拼起来，而是一个可以整体调用的表达单元。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">空间画面：介词和短语中的关系先用位置、方向、支撑、压力、边界来理解。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">句子骨架：先确认谁在什么情况下做了什么，再把原因、转折、结果和补充接上去。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">听力训练：第一遍抓事件，第二遍找语块边界，第三遍模仿语音和节奏。</font></font></font></p></li>
+</ul>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>二、听力输入：先抓语块，不逐词搬运</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/02-listening-boundaries.png" name="听力断句图" alt="听力断句图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>语块是声音、意义和句子结构的共同单位。</i></font></font></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">照片中的发音分析已经用斜线标出了多个意群。这里不把斜线理解成机械停顿，而把它看成听者的“信息分组”：主句先建立事件，</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">because</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">while</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">although</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">as</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">that</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">who
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">等关系词再把新信息挂接上去。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>2.1
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>例句：双语者文章的句子骨架</b></font></font></font></h2>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #f5f6f7">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#2e63c7"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>Children
+learn languages more easily</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ because the plasticity of their developing brains / lets them use
+both hemispheres.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">核心事件：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">Children
+learn languages more easily</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">。原因：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">the
+plasticity of their developing brains</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">。原因内部的动作：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">lets
+them use both hemispheres</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">。听力时先把主句听完整，再把
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">because
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">后面的解释挂回去。</font></font></font></p>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #f5f6f7">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#2e63c7"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>The
+philosophy and practice of 996</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ is complex. / Most of the employees that we interviewed / evidently
+knew / that they were sacrificing their physical and mental health, /
+but they still persevere.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">这句话的听力重点不是记住每一个单词，而是依次识别：主题对象
+→ 判断 → 定语从句 → </font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">that
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">引出的内容
+→ </font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">but
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">转折。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>2.2
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>听力中的四种信息层次</b></font></font></font></h2>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="132"/>
+	<col width="462"/>
+	<thead>
+		<tr>
+			<td width="132" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>层次</b></font></font></font></p>
+			</td>
+			<td width="462" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>听力判断方法</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">事件</span></font></font></font></p>
+			</td>
+			<td width="462" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">谁
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">/
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">什么
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">+
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">做了什么。先建立句子承重结构。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">关系</span></font></font></font></p>
+			</td>
+			<td width="462" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">because</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">but</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">while</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">although</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">as</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">so
+				that </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">等告诉你下一块信息与上一块是什么关系。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">补充</span></font></font></font></p>
+			</td>
+			<td width="462" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">who</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">whose</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">that</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">where
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">等把说明信息接到前面的名词或事件上。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">结果</span></font></font></font></p>
+			</td>
+			<td width="462" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">translate
+				into</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">end
+				up</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">so
+				that</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">as
+				a result </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">等把前面的动作落到后果或目标。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>三、空间画面：介词是关系镜头</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/03-preposition-space.png" name="介词空间图" alt="介词空间图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>介词先回答“对象之间如何摆放或移动”，再扩展到抽象关系。</i></font></font></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">介词不应该只背一个中文意思。更稳的方法是先建立一个空间画面：对象在哪里、向哪里移动、是否接触、是否受到支撑、是否被某种力量控制。抽象用法往往是这个空间关系的延伸。</font></font></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="138"/>
+	<col width="166"/>
+	<col width="276"/>
+	<thead>
+		<tr>
+			<td width="138" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>语块</b></font></font></font></p>
+			</td>
+			<td width="166" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>空间画面</b></font></font></font></p>
+			</td>
+			<td width="276" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>底层理解</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="138" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">across
+				the board</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">横向跨过整块板面</span></font></font></font></p>
+			</td>
+			<td width="276" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">影响覆盖所有部门、所有层级或所有方面。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">on
+				the face of it</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">停留在表面看到的那一层</span></font></font></font></p>
+			</td>
+			<td width="276" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从表面证据看起来是这样，但不一定等于深层事实。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">have
+				nothing to do with</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两者之间没有连线</span></font></font></font></p>
+			</td>
+			<td width="276" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">某人或某事不参与、不涉及、不构成原因。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">excel
+				at</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">在某个领域的高点上表现突出</span></font></font></font></p>
+			</td>
+			<td width="276" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">在某个活动或能力范围内超过一般水平。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">unimpeded
+				by worries</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">前进路径没有被障碍挡住</span></font></font></font></p>
+			</td>
+			<td width="276" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">没有被担忧、顾虑或阻碍拖住。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>四、路径进入结果：短语如何从空间变成抽象意义</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/04-path-to-result.png" name="路径与结果图" alt="路径与结果图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>很多短语是在表达“进入某种状态”或“最后落到某个结果”。</i></font></font></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="152"/>
+	<col width="166"/>
+	<col width="262"/>
+	<thead>
+		<tr>
+			<td width="152" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>表达</b></font></font></font></p>
+			</td>
+			<td width="166" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>动作画面</b></font></font></font></p>
+			</td>
+			<td width="262" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>听力中的整体意思</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">translate
+				into</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从一种状态进入另一种状态</span></font></font></font></p>
+			</td>
+			<td width="262" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">前面的行为最终带来后面的结果。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">come
+				into the spotlight</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">进入聚光灯的范围</span></font></font></font></p>
+			</td>
+			<td width="262" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">获得大量公众注意，成为焦点。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">come
+				to public attention</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">进入公众视野</span></font></font></font></p>
+			</td>
+			<td width="262" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">某件事被公众注意到。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">end
+				up</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">经过一串过程后落在某个位置</span></font></font></font></p>
+			</td>
+			<td width="262" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">最后处于某种状态，往往不是最初计划的结果。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				a taste for</span></font></font></font></span></font></p>
+			</td>
+			<td width="166" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">逐渐把某种味道收进自己的经验</span></font></font></font></p>
+			</td>
+			<td width="262" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">慢慢喜欢上、逐渐适应某事物。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>五、关系力学：压力、支撑、控制与深层</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/05-force-relations.png" name="关系力学图" alt="关系力学图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>把抽象心理和社会关系还原成“重量、支撑、控制、深度”。</i></font></font></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="158"/>
+	<col width="153"/>
+	<col width="269"/>
+	<thead>
+		<tr>
+			<td width="158" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>语块</b></font></font></font></p>
+			</td>
+			<td width="153" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>空间动作</b></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>抽象延伸</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">weigh
+				on someone</span></font></font></font></span></font></p>
+			</td>
+			<td width="153" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">重量压在某人身上</span></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">问题、责任或压力让人担忧、不快乐。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">place
+				immense pressure on</span></font></font></font></span></font></p>
+			</td>
+			<td width="153" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">把重压施加到对象上</span></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">对学生、员工或自己施加巨大压力。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">shore
+				up</span></font></font></font></span></font></p>
+			</td>
+			<td width="153" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从侧面或底部撑住脆弱部分</span></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">帮助支持薄弱的经济、信心或结构。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">at
+				the mercy of</span></font></font></font></span></font></p>
+			</td>
+			<td width="153" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">处在别人完全控制的范围内</span></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">任人摆布，无法掌握主动权。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">deep
+				down</span></font></font></font></span></font></p>
+			</td>
+			<td width="153" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">沉到内心深处</span></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">某种真实感受虽然没有直接说出，但内心其实存在。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">haunted
+				by</span></font></font></font></span></font></p>
+			</td>
+			<td width="153" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">被某个记忆或问题追着不放</span></font></font></font></p>
+			</td>
+			<td width="269" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">持续困扰、让人担忧或悲伤。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>六、词族与方向：先看动作，再看词形</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/06-migration-directions.png" name="方向词族图" alt="方向词族图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#6b7280"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>immigrate</i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>、</i></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>emigrate</i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>、</i></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>migrate
+</i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>的差异首先来自路径方向。</i></font></font></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="132"/>
+	<col width="159"/>
+	<col width="289"/>
+	<thead>
+		<tr>
+			<td width="132" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>词族</b></font></font></font></p>
+			</td>
+			<td width="159" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>核心方向</b></font></font></font></p>
+			</td>
+			<td width="289" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>例句或搭配</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">immigrate</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">进入另一个国家长期居住</span></font></font></font></p>
+			</td>
+			<td width="289" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">immigrate
+				to the US</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；重点是进入目的地。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">emigrate</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">离开自己的国家</span></font></font></font></p>
+			</td>
+			<td width="289" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">emigrate
+				from China</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；重点是离开起点。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">migrate</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从一个地方移动到另一个地方</span></font></font></font></p>
+			</td>
+			<td width="289" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">birds
+				migrate from/to...</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；强调迁移过程。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				/ acquisition</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">把技能、知识或语言逐渐获得</span></font></font></font></p>
+			</td>
+			<td width="289" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				skills</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">language
+				acquisition</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				a taste for...</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">vary
+				/ varying / various</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">数量或程度发生变化</span></font></font></font></p>
+			</td>
+			<td width="289" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">varying
+				proportions</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；注意
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">varying
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">不是
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">various</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>七、双语者：语言数量相同，概念连接方式不同</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/07-bilingual-concepts.png" name="双语者概念系统图" alt="双语者概念系统图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>三种双语者不是简单的等级，而是语言与概念系统的不同连接方式。</i></font></font></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="158"/>
+	<col width="206"/>
+	<col width="216"/>
+	<thead>
+		<tr>
+			<td width="158" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>类型</b></font></font></font></p>
+			</td>
+			<td width="206" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>概念系统</b></font></font></font></p>
+			</td>
+			<td width="216" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>记忆画面</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">compound
+				bilingual</span></font></font></font></span></font></p>
+			</td>
+			<td width="206" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两种语言连接到一套概念系统</span></font></font></font></p>
+			</td>
+			<td width="216" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两个语言标签共同贴在一个概念盒子上。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">coordinate
+				bilingual</span></font></font></font></span></font></p>
+			</td>
+			<td width="206" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两种语言在不同环境中形成两套概念系统</span></font></font></font></p>
+			</td>
+			<td width="216" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两种语言分别放在不同房间，场景不同。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">subordinate
+				bilingual</span></font></font></font></span></font></p>
+			</td>
+			<td width="206" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">第二语言通过母语过滤和理解</span></font></font></font></p>
+			</td>
+			<td width="216" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">新语言卡片要先经过母语筛子。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">原文
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">Gabriella
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">的例子正好把三种类型放在同一个家庭中：两岁时移民的
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">Gabriella
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">可能用一套概念同时发展两种语言；十几岁的哥哥可能在学校和家庭中形成两套概念；父母则可能通过母语过滤第二语言。</font></font></font></p>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>八、大脑可塑性：语言学习不仅是词汇增加</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/08-brain-plasticity.png" name="大脑可塑性图" alt="大脑可塑性图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#6b7280"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>plasticity</i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>、</i></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>hemisphere</i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>、</i></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>lateralized
+</i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>和
+</i></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 9pt"><i>holistic
+grasp </i></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>共同解释语言学习的背景。</i></font></font></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="165"/>
+	<col width="429"/>
+	<thead>
+		<tr>
+			<td width="165" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>表达</b></font></font></font></p>
+			</td>
+			<td width="429" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>底层逻辑</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="165" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">plasticity
+				of the developing brain</span></font></font></font></span></font></p>
+			</td>
+			<td width="429" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">正在发育的大脑具有可塑性，可以被塑造成不同的学习路径。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="165" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">both
+				hemispheres</span></font></font></font></span></font></p>
+			</td>
+			<td width="429" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">儿童语言学习中可能更充分地调用两个大脑半球。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="165" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">be
+				lateralized to one hemisphere</span></font></font></font></span></font></p>
+			</td>
+			<td width="429" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">成人语言功能更可能偏向一个半球，</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">usually
+				the left</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="165" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">give
+				a holistic grasp</span></font></font></font></span></font></p>
+			</td>
+			<td width="429" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">不仅懂字面，还能整体理解语言背后的社会和情感背景。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="165" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">conversely
+				/ rational approach</span></font></font></font></span></font></p>
+			</td>
+			<td width="429" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">相反地，成年后学习第二语言的人，在第二语言中面对问题时可能表现出较少情绪偏见和更理性的处理方式。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>九、</b></font></font><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="4" style="font-size: 15pt"><b>996
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>与职业选择：把长句还原成信息链</b></font></font></font></h1>
+<p align="center" style="line-height: 100%; margin-top: 0.18cm; margin-bottom: 0.07cm">
+<img src="assets/english-listening-xiaohei/09-career-motives.png" name="职业动机图" alt="职业动机图" align="bottom" width="600" height="338" border="0"/>
+</p>
+<p align="center" style="line-height: 100%"><font color="#6b7280"><font face="Arial Unicode MS"><font size="2" style="font-size: 9pt"><i>职业选择的表面理由之外，还存在物质、认可、控制感和自主快乐。</i></font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>9.1
+996 </b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>段落的语块链</b></font></font></font></h2>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #f5f6f7">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#2e63c7"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>996
+is a phrase</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ used to describe the routine of working from 9am to 9pm, 6 days a
+week.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">核心骨架：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+is a phrase</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">。后面的
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">used
+to describe... </font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">是说明用途的补充。</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">routine
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">不是单次动作，而是反复出现的日常模式。</font></font></font></p>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #f5f6f7">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#2e63c7"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>This
+kind of work schedule</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ has become commonplace in China, / especially in Tech and Internet
+companies.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">这里的
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">especially
+in </font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">不是新事件，而是把“常见”进一步限定到某个范围。</font></font></font></p>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #f5f6f7">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#2e63c7"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>This
+industrious attitude</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ will translate into business success.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">translate
+into </font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">把“态度”推入“结果状态”：勤奋态度
+→ 商业成功。</font></font></font></p>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #fff0ed">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#d54a3a"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>However,
+the dark side of working 996</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ came into the spotlight / when an employee died while working...</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">However
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">标记转折，</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">dark
+side </font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">是前面积极叙述之后的反面信息，</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">came
+into the spotlight </font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">表示进入公众视野。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>9.2
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>职业选择段落的三层优先事项</b></font></font></font></h2>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-bottom: 0.18cm; background: #f5f6f7">
+<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#2e63c7"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt"><b>When
+it comes to choosing an occupation</b></font></font></font><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">
+/ we tend to be haunted by three additional priorities.</font></font></font></span></font></p>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="152"/>
+	<col width="186"/>
+	<col width="242"/>
+	<thead>
+		<tr>
+			<td width="152" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>优先事项</b></font></font></font></p>
+			</td>
+			<td width="186" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>原文语块</b></font></font></font></p>
+			</td>
+			<td width="242" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>底层动机</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">物质需求</span></font></font></font></p>
+			</td>
+			<td width="186" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">cover
+				reasonable material expenses</span></font></font></font></span></font></p>
+			</td>
+			<td width="242" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">工作首先要支付合理的生活成本。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">他人认可</span></font></font></font></p>
+			</td>
+			<td width="186" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">enough
+				to impress other people</span></font></font></font></span></font></p>
+			</td>
+			<td width="242" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">收入或职业地位还被用来影响别人对自己的看法。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">自主与控制感</span></font></font></font></p>
+			</td>
+			<td width="186" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">not
+				to be at the mercy of other people</span></font></font></font></span></font></p>
+			</td>
+			<td width="242" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">希望不受制于他人，减少内心的恐惧和不信任。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="152" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">自我快乐</span></font></font></font></p>
+			</td>
+			<td width="186" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">find
+				a way to its own pleasures</span></font></font></font></span></font></p>
+			</td>
+			<td width="242" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">被爱和有安全感的人，可以因为热爱而努力，而不是只为掌声。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>十、疑问词与关系词：它们是在管理信息缺口</b></font></font></font></h1>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="105"/>
+	<col width="159"/>
+	<col width="316"/>
+	<thead>
+		<tr>
+			<td width="105" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>词</b></font></font></font></p>
+			</td>
+			<td width="159" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>信息缺口</b></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>原文中的作用</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="105" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">what</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">内容或事物</span></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">What
+				would enable us to make the right career choices...</span></font></font></font></span></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">who
+				/ whose</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">人物或所属关系</span></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">people
+				who learned...</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">Gabriella
+				whose family immigrates...</span></font></font></span></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">时间</span></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when
+				she was two years old</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when
+				an employee died...</span></font></font></span></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">how</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">方式、程度或过程</span></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">how
+				they acquired each language</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">how
+				much she has improved</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">whether</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两种可能之间的选择</span></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">as
+				to whether it will be known in 100 years...</span></font></font></font></span></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when
+				it comes to</span></font></font></font></span></font></p>
+			</td>
+			<td width="159" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">把话题聚焦到某领域</span></font></font></font></p>
+			</td>
+			<td width="316" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when
+				it comes to choosing an occupation</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>十一、</b></font></font><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="4" style="font-size: 15pt"><b>15
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>分钟听力复习法</b></font></font></font></h1>
+<ol>
+	<li value="1"><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">第一遍：只回答“这段话的核心事件是什么”，不暂停查词。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">第二遍：用斜线标出语块边界，圈出
+	</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">because</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">but</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">while</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">although</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">as</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">that</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">、</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">who
+	</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">等关系词。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">第三遍：遮住中文，按语块跟读，尽量保持原文的停顿和信息顺序。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">第四步：选一个语块替换对象，例如把
+	</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">cover
+	reasonable material expenses </font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">换成
+	</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">cover
+	daily expenses</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">。</font></font></font></p></li>
+	<li><p style="line-height: 125%; margin-bottom: 0.14cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">第五步：用自己的经历造一句话，再检查介词和句子骨架。</font></font></font></p></li>
+</ol>
+<p style="margin-right: 0.32cm; margin-left: 0.32cm; line-height: 142%; margin-top: 0.18cm; margin-bottom: 0.32cm; background: #fff3e8">
+<font color="#e97824"><font face="Arial Unicode MS"><font size="3" style="font-size: 11pt"><b>复习时不要把“记住中文”当成终点。真正的终点是：听到语块，脑中能迅速出现关系画面，并能把它放回一个完整句子。</b></font></font></font></p>
+<h1 class="cjk"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>十二、可直接复习的高频语块清单</b></font></font></font></h1>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="185"/>
+	<col width="409"/>
+	<thead>
+		<tr>
+			<td width="185" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>语块</b></font></font></font></p>
+			</td>
+			<td width="409" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>复习提醒</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">across
+				the board</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">整体覆盖所有方面，不是“在板子上”。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">varying
+				proportion</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">比例不同；注意
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">varying
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示变化，</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">various
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示各种各样。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				a taste for</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">逐渐喜欢上；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">是逐渐获得。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">come
+				into the spotlight</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">进入聚光灯，成为公众焦点。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">translate
+				into business success</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从一种状态转化为另一种结果。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">weigh
+				on young employees</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">压力像重量一样压在年轻员工身上。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">shore
+				up a fragile sense of esteem</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">撑住脆弱的自尊。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">at
+				the mercy of other people</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">处在他人完全控制之下。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">on
+				the face of it</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从表面看来。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">have
+				nothing to do with</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">与……没有关系。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">excel
+				at English</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">在某个领域表现突出。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">crave
+				applause</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">渴望掌声和认可。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">end
+				up working extremely hard</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">最后落到某种状态。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">unimpeded
+				by worries</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">不被担忧挡住。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="185" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">find
+				a way to its own pleasures</span></font></font></font></span></font></p>
+			</td>
+			<td width="409" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">找到通向自己快乐的方式。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<h1 class="cjk" style="margin-top: 0cm; page-break-before:auto"><font color="#2e63c7"><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>附录
+</b></font></font><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="4" style="font-size: 15pt"><b>A</b></font></font></span></font><font face="Arial Unicode MS"><font size="4" style="font-size: 15pt"><b>｜原文段落、参考译文与词块全量索引</b></font></font></font></h1>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">为避免总结过程造成信息损失，本附录保留照片中出现的四组完整段落，并把原始词块按“画面—关系—表达”重新列出。正文负责理解和迁移，附录负责逐句回查。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>A1
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>双语能力与语言学习</b></font></font></font></h2>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">And
+besides having an easier time traveling or watching movies without
+subtitles, knowing two or more languages means that your brain may
+actually look and work differently than those of your monolingual
+friends. So what does it really mean to know a language? Language
+ability is typically measured in two active parts, speaking and
+writing, and two passive parts, listening and reading. While a
+balanced bilingual has near-equal abilities across the board in two
+languages, most bilinguals around the world know and use their
+languages in varying proportions. And depending on their situations
+and how they acquired each language, they can be classified into
+three general types.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">参考译文：会说两种或更多语言，不仅让旅行更方便、看电影时不需要字幕，也可能让大脑的思维和运作方式与只会一种语言的朋友不同。语言能力通常由两个主动部分（口语和写作）以及两个被动部分（听力和阅读）衡量。平衡双语者在两种语言上的能力几乎相同，但大多数双语者掌握和使用语言的程度并不一样；根据他们的处境和学习方式，通常可以分为三类。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>A2
+Gabriella </b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>家庭中的三种双语者</b></font></font></font></h2>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">For
+example, let’s take Gabriella, whose family immigrates to the US
+from Peru when she was two years old. As a compound bilingual,
+Gabriella develops two linguistic codes simultaneously with a single
+set of concepts, learning both English and Spanish as she begins to
+process the world around her. Her teenage brother, on the other hand,
+might be a coordinate bilingual, working with two sets of concepts,
+learning English in school while continuing to speak Spanish at home
+and with friends. Finally, Gabriella’s parents are likely to be
+subordinate bilinguals who learn a secondary language by filtering it
+through their primary language.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">参考译文：以加布里埃拉为例，她两岁时全家从秘鲁移民到美国。作为复合双语者，她用一套概念同时发展两种语言，在开始理解周围世界时学习英语和西班牙语。她十几岁的哥哥可能属于协调双语者：在学校学习英语，同时在家里和朋友之间继续说西班牙语。父母则可能是从属双语者，通过母语过滤第二语言。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>A3
+996</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>：从工作制度到公共议题</b></font></font></font></h2>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+is a phrase used to describe the routine of working from 9am to 9pm,
+6 days a week. This kind of work schedule has become commonplace in
+China, especially in Tech and Internet companies. As tech
+entrepreneurs hope, this industrious attitude will translate into
+business success. However, the dark side of working 996 came into the
+spotlight in January 2021 when an employee died while working for
+e-commerce giant Pinduoduo. But this wasn't the first time 996 came
+to public attention. In 2019, an online movement called 996.icu,
+initiated by Chinese IT practitioners, criticized the practice of 996
+in posts, stating it threatened the health of tech employees.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">参考译文：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">用来描述每周工作六天、每天从早上九点到晚上九点的工作日常。这种工作制度在中国已经司空见惯，尤其是在科技和互联网公司。科技企业家希望这种勤奋态度能转化为企业成功。但
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">2021
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">年
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">1
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">月，一名员工在电商巨头拼多多工作期间死亡，</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">工作的阴暗面进入公众视野。</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">并不是第一次受到关注：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">2019
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">年，中国
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">IT
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">从业者发起的网络行动
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996.icu
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">发帖批评这种做法，指出它威胁科技员工的健康。</font></font></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">The
+philosophy and practice of 996 is complex. Most of the employees that
+we interviewed evidently knew that they were sacrificing their
+physical and mental health, but they still persevere. Heavy stress is
+weighing on young employees in China due to the immense pressure they
+place on themselves to improve their economic position and social
+status. There is hope for change as some companies begin to
+acknowledge the extremity of 996 and offer fairer working hours to
+their employees. However, although 996 has been brought to the
+public’s attention and has been criticized for many years, their
+practice continues.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">参考译文：</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">的理念和做法很复杂。我们采访的大多数员工显然知道自己正在牺牲身心健康，但仍然坚持。由于为了改善经济地位和社会地位而施加在自己身上的巨大压力，重压正压在中国年轻员工身上。一些公司开始认识到
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">的极端性，并为员工提供更公平的工作时长，这让人看到改变的希望。然而，尽管
+</font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">996
+</font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">多年来一直受到公众关注和批评，这种做法仍在继续。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>A4
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>职业选择：表层目标与深层动机</b></font></font></font></h2>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">But
+in order to think so freely, we would have to be emotionally balanced
+in a way that few of us actually are. In reality, when it comes to
+choosing an occupation, we tend to be haunted by three additional
+priorities: we need to find a job that will pay not just enough to
+cover reasonable material expenses, but a lot more besides, enough to
+impress other people, even other people we don’t like very much. We
+also crave to find a job that will allow us not to be at the mercy of
+other people, whom we may deep down fear and distrust. And we hope
+for a job that will make us known, esteemed, honored, and perhaps
+famous, so that we will never again have to feel small or neglected.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 11pt">What
+would enable us to make the right career choices is something that
+seems on the face of it to have nothing to do with work at all: love,
+a profound experience of love in both childhood and adulthood. A
+child who is properly loved is a creature who doesn't need to prove
+itself in any significant way. It doesn't have to excel at school,
+dazzle acquaintances or shore up parent's fragile sense of esteem. It
+may do well at school anyway, but because it enjoys the work, not
+because it has to boost the parents. It can find its way to its own
+pleasures. It doesn't need to amaze because it's special enough just
+by existing. It may end up working extremely hard, but it will do so
+because it is passionate, not because it craves applause. It can
+concentrate on doing a job very well, while unimpeded by any worries
+as to whether it will be known in 100 years or to people in another
+city.</font></font></font></span></font></p>
+<p style="line-height: 133%; margin-bottom: 0.21cm"><font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 11pt">参考译文：要如此自由地思考，我们必须保持情绪稳定，而这很少有人能做到。事实上，选择职业时，我们常被三类额外优先事项困扰：工作不仅要负担合理的物质需求，还要有足够的收入让别人高看自己；还希望不受他人摆布，因为内心深处可能害怕并不信任某些人；同时希望工作让自己被认识、被尊敬、受敬重，甚至扬名，从而不再感到渺小或被忽视。真正帮助我们做出正确职业选择的，表面上似乎与工作无关：是在童年和成年时期都获得深刻的爱。被充分爱着的孩子不需要用成绩、炫耀熟人或支撑父母脆弱的自尊来证明自己；他可以因为享受工作而努力，也可以找到属于自己的快乐。即使最终非常努力，也是因为热爱，而不是渴望掌声；他可以专注把工作做好，不被“将来是否出名”的担忧阻挡。</font></font></font></p>
+<h2 class="cjk" style="margin-top: 0.49cm; margin-bottom: 0.25cm"><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font color="#e97824"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>A5
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>词块全量对照（来自
+</b></font></font><font face="Arial Unicode MS, sans-serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="3" style="font-size: 13pt"><b>17
+</b></font></font></span></font><font face="Arial Unicode MS"><font size="3" style="font-size: 13pt"><b>张照片）</b></font></font></font></h2>
+<table width="624" cellpadding="7" cellspacing="0">
+	<col width="158"/>
+	<col width="173"/>
+	<col width="249"/>
+	<thead>
+		<tr>
+			<td width="158" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>词块
+				</b></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><b>/
+				</b></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>词族</b></font></font></font></p>
+			</td>
+			<td width="173" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>画面或关系</b></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#eef5ff" style="background: #eef5ff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#2e63c7"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><b>本组材料中的用法</b></font></font></font></p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">monolingual
+				/ bilingual / multilingual</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">语言数量的范围</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">单语、双语、多语；注意
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">mono-
+				/ bi- / multi- </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">的数量线索。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">state-owned
+				monopoly</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">一个主体占据整块市场</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">国有垄断企业；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">monopoly
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">的核心是控制供给。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">varying
+				proportion</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">同一整体中比例不同</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">双语者对不同语言的掌握和使用程度不同。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				skills / knowledge / language</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">把对象逐渐收进经验</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">获得技能、知识或语言；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acquire
+				a taste for </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示逐渐喜欢上。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">simultaneously</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">两条线在同一时间发生</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">孩子同时发展两种语言；也可用于
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">simultaneously
+				interpreting</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">social
+				and emotional contexts</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">语言嵌在社会和情感场景中</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">holistic
+				grasp </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">不只理解字面，还理解背景。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">exhibit
+				emotional bias / rational approach</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">情绪偏向与理性处理的对照</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">exhibit
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">是显露；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">rational
+				decision / think rationally </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">以理由而非情绪为依据。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">regardless
+				of when</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">时间条件被拿掉</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">不论何时获得更多语言，都会带来某些优势。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">routine
+				/ commonplace</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">反复出现并成为常见模式</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">routine
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">是日常程序；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">996
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">在某些行业变得
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">commonplace</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">initiate
+				/ practitioner</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">发起动作与执行者</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">online
+				movement initiated by Chinese IT practitioners</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">acknowledge
+				the extremity</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">看见并承认极端程度</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">公司开始承认
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">996
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">的极端性并提供
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">fairer
+				working hours</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">emotionally
+				balanced</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">情绪保持在可控范围</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">能处理生活挑战、建立关系并从挫折中恢复。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when
+				it comes to</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">把镜头切到特定主题</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">when
+				it comes to choosing an occupation / children’s safety</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">cover
+				reasonable material expenses</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">收入覆盖物质成本</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">cover
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示钱足以支付费用。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">impress
+				/ esteemed / honored</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">给别人留下高评价</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">impress
+				other people </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">到被
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">esteemed</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">honored</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">crave
+				attention / crave applause / long for</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">强烈渴望某个对象</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">crave
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">比普通
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">want
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">更强；可与
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">attention</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">applause
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">搭配。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">die
+				for / at the mercy of</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">渴望与失去控制的两端</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">die
+				for </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示非常想要；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">at
+				the mercy of </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示任人摆布。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">feel
+				small or neglected</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">在关系中被压低或被忽视</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">与
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">fragile
+				sense of esteem</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">、</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">boost
+				parents </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">的语境相连。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">on
+				the face of it / have nothing to do with</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表面层与无连接</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表面看似与工作无关，但深层原因可能是爱。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">profound
+				impact / influence / sense of guilt</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">向内深入并产生强影响</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">profound
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示强烈或深刻。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">excel
+				at / dazzle acquaintances</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">在领域高点表现并让熟人惊叹</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">excel
+				at </span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">相当于
+				</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">be
+				good at</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">dazzle
+				</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">表示使人强烈钦佩。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">shore
+				up / boost</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">从侧面或底部支撑、抬高</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">shore
+				up fragile self-esteem</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">；</span></font></font><font face="Arial Unicode MS, serif"><span lang="en-US"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">boost
+				the parents</span></font></font></span></font><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">。</span></font></font></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="158" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font face="Arial Unicode MS, serif"><span lang="en-US"><font color="#263238"><font face="Arial Unicode MS, serif"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">never
+				cease to amaze / end up / unimpeded</span></font></font></font></span></font></p>
+			</td>
+			<td width="173" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">持续惊叹、过程落点、无阻碍</span></font></font></font></p>
+			</td>
+			<td width="249" bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #cfd7e0; padding: 0.18cm 0.28cm"><p>
+				<font color="#263238"><font face="Arial Unicode MS"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">把事件链的终点和路径是否被阻断说清楚。</span></font></font></font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+
+  </main>
+</div>
+<div class="site-footer">本页为 English OS 3.0 的增量学习材料；原始 17 张学习照片与 9 张小黑解释图均保留在仓库资产目录中。</div>
+<button class="back-top" id="back-top" aria-label="返回顶部">↑</button>
+<script>
+(() => {
+  const content = document.getElementById('courseware');
+  const headings = [...content.querySelectorAll('h1,h2')];
+  const toc = document.getElementById('toc-links');
+  const slug = (text, i) => 'section-' + i + '-' + text.toLowerCase().replace(/[^a-z0-9一-鿿]+/g,'-').replace(/^-|-$/g,'');
+  headings.forEach((heading, i) => {
+    heading.id = slug(heading.textContent, i);
+    const link = document.createElement('a');
+    link.href = '#' + heading.id;
+    link.textContent = heading.textContent.replace(/\s+/g,' ').trim();
+    if (heading.tagName === 'H2') link.className = 'sub';
+    toc.appendChild(link);
+  });
+  const links = [...toc.querySelectorAll('a')];
+  const progress = document.getElementById('progress-bar');
+  const backTop = document.getElementById('back-top');
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    backTop.classList.toggle('show', window.scrollY > 500);
+    let active = 0;
+    headings.forEach((heading, i) => { if (heading.getBoundingClientRect().top < 130) active = i; });
+    links.forEach((link, i) => link.classList.toggle('active', i === active));
+  };
+  window.addEventListener('scroll', update, { passive: true }); update();
+  document.getElementById('print-btn').addEventListener('click', () => window.print());
+  document.getElementById('focus-btn').addEventListener('click', () => document.body.classList.toggle('focus-mode'));
+  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  document.addEventListener('keydown', (event) => {
+    if ((event.key === 'f' || event.key === 'F') && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) document.body.classList.toggle('focus-mode');
+    if (event.key === 'Home') window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
